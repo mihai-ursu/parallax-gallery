@@ -21,7 +21,7 @@ const SingleImage = ({ name, src }) => {
     data.previous += (data.current - data.previous) * data.ease;
     data.rounded = Math.round(data.previous * 100) / 1200;
 
-    imageContainer.current.style.transform = `translate3d(-50%, -${data.rounded}px, 0)`;
+    imageContainer.current.style.transform = `translate3d(-50%, ${data.rounded}px, 0)`;
 
     requestAnimationFrame(() => parallaxScrolling());
   };

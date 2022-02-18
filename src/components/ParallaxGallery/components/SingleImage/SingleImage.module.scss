@@ -41,12 +41,11 @@
 }
 
 .innerWrapper {
-  position: relative;
+  position: absolute;
   width: 142%;
   height: 142%;
   left: 50%;
-  top: 0;
-  transform: translateX(-50%);
+  bottom: 0;
 }
 
 .image {
