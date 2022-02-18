@@ -1,0 +1,8 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 1fr));
+  height: 100%;
+  gap: 6rem 2rem;
+  margin-top: 10rem;
+  grid-template-rows: 600px 600px 600px;
+}

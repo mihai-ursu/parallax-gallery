@@ -1,9 +1,51 @@
+import { useRef, useEffect } from "react";
+import ParallaxGallery from "../components/ParallaxGallery/ParallaxGallery";
 import styles from "../styles/Home.module.scss";
+import imagesData from "../assets/data";
+import useWindowSize from "../hooks/useWindowSize";
 
 const Home = () => {
+  const app = useRef();
+  const scrollContainer = useRef();
+  const size = useWindowSize();
+
+  const data = {
+    ease: 0.1,
+    current: 0,
+    previous: 0,
+    rounded: 0,
+  };
+
+  useEffect(() => {
+    requestAnimationFrame(() => smoothScrolling());
+  }, []);
+
+  useEffect(() => {
+    setBodyHeight();
+  }, [size.height]);
+
+  const setBodyHeight = () => {
+    document.body.style.height = `${
+      scrollContainer.current.getBoundingClientRect().height + 200
+    }px`;
+  };
+
+  const smoothScrolling = () => {
+    data.current = window.scrollY;
+    data.previous += (data.current - data.previous) * data.ease;
+    data.rounded = Math.round(data.previous * 100) / 100;
+
+    scrollContainer.current.style.transform = `translate3d(0, -${data.rounded}px, 0)`;
+
+    requestAnimationFrame(() => smoothScrolling());
+  };
+
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Parallax Gallery</h1>
+    <div className={styles.app} ref={app}>
+      <div className={styles.container} ref={scrollContainer}>
+        <h1 className={styles.title}>Skew Gallery</h1>
+        <ParallaxGallery images={imagesData.images} />
+      </div>
     </div>
   );
 };

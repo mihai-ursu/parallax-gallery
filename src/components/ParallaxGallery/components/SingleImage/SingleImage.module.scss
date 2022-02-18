@@ -1,0 +1,54 @@
+.imageWrapper {
+  grid-column-end: span 4;
+  grid-row-end: span 1;
+  position: relative;
+  overflow: hidden;
+
+  &:nth-child(1),
+  &:nth-child(6) {
+    margin-right: 4rem;
+    margin-top: 8rem;
+  }
+
+  &:nth-child(2) {
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  &:nth-child(3) {
+    margin-left: 8rem;
+    margin-top: 12rem;
+  }
+
+  &:nth-child(4) {
+    margin-left: 10rem;
+    margin-top: 14rem;
+  }
+
+  &:nth-child(5) {
+    margin: 6rem 4rem 4rem 4rem;
+  }
+
+  &:nth-child(7) {
+    grid-column: 4 / span 4;
+    margin: 8rem 8rem 2rem 1rem;
+  }
+
+  &:nth-child(8) {
+    grid-column: 8 / span 4;
+    margin: 4rem 4rem 1rem 0;
+  }
+}
+
+.innerWrapper {
+  position: relative;
+  width: 142%;
+  height: 142%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.image {
+  object-fit: cover;
+}
