@@ -1,1 +1,1 @@
-## Parralax Gallery that uses Framer Motion
+## Parralax Gallery in NextJS
