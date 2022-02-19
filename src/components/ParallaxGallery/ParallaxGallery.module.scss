@@ -4,5 +4,19 @@
   height: 100%;
   gap: 6rem 2rem;
   margin-top: 10rem;
-  grid-template-rows: 600px 600px 600px;
+  grid-template-rows: repeat(3, 600px);
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 2rem repeat(8, 1fr) 2rem;
+    gap: 2rem;
+    margin-top: 6rem;
+    grid-template-rows: repeat(4, 400px);
+  }
+
+  @media screen and (max-width: 728px) {
+    grid-template-columns: 1rem repeat(6, 1fr) 1rem;
+    gap: 2rem;
+    margin-top: 5rem;
+    grid-template-rows: repeat(8, 400px);
+  }
 }

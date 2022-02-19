@@ -2,6 +2,10 @@
   padding: 0 2rem;
   max-width: 1460px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1200px) {
+    padding: 0;
+  }
 }
 
 .main {
