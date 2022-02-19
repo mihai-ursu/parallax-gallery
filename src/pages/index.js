@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <div className={styles.app} ref={app}>
       <div className={styles.container} ref={scrollContainer}>
-        <h1 className={styles.title}>Skew Gallery</h1>
+        <h1 className={styles.title}>Parallax Gallery</h1>
         <ParallaxGallery images={imagesData.images} />
       </div>
     </div>
