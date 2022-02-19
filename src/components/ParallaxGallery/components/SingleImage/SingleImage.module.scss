@@ -64,6 +64,10 @@
     @media screen and (max-width: 1200px) {
       margin: 0;
     }
+
+    @media screen and (max-width: 728px) {
+      display: none;
+    }
   }
 
   &:nth-child(7) {
@@ -77,8 +81,7 @@
     }
 
     @media screen and (max-width: 728px) {
-      grid-column-start: 2;
-      grid-column-end: span 6;
+      display: none;
     }
   }
 
@@ -93,8 +96,7 @@
     }
 
     @media screen and (max-width: 728px) {
-      grid-column-start: 2;
-      grid-column-end: span 6;
+      display: none;
     }
   }
 }
