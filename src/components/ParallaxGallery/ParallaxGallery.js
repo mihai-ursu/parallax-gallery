@@ -11,8 +11,6 @@ const ParallaxGallery = (props) => {
     setGalleryHeight(gallery.current.getBoundingClientRect().height);
   }, []);
 
-  console.log(galleryHeight);
-
   return (
     <div className={styles.gallery} ref={gallery}>
       {images.map((image) => {
