@@ -107,6 +107,11 @@
   height: 142%;
   left: 50%;
   bottom: 0;
+
+  @media screen and (max-width: 728px) {
+    width: 166%;
+    height: 156%;
+  }
 }
 
 .image {
