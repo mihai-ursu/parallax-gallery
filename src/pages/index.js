@@ -1,10 +1,9 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, Fragment } from "react";
 import ParallaxGallery from "../components/ParallaxGallery/ParallaxGallery";
 import styles from "../styles/Home.module.scss";
 import imagesData from "../assets/data";
 import useWindowSize from "../hooks/useWindowSize";
 import Head from "next/head";
-import { Fragment } from "react/cjs/react.production.min";
 
 const Home = () => {
   const app = useRef();
