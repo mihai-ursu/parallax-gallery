@@ -19,8 +19,8 @@ const SingleImage = ({ name, src, galleryHeight }) => {
   const parallaxScrolling = () => {
     data.current = window.scrollY;
     data.previous += (data.current - data.previous) * data.ease;
-    const roundedDivider = galleryHeight * 0.42;
-    data.rounded = Math.round(data.previous * 100) / roundedDivider;
+    const divider = galleryHeight * 0.42;
+    data.rounded = Math.round(data.previous * 100) / divider;
 
     imageContainer.current.style.transform = `translate3d(-50%, ${data.rounded}px, 0)`;
 
