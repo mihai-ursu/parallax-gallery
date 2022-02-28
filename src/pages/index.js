@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import styles from "../styles/Home.module.scss";
 import ParallaxGallery from "../components/ParallaxGallery/ParallaxGallery";
 import imagesData from "../assets/data";
+import Head from "next/head";
 
 const Home = () => {
   return (
